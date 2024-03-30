@@ -3,23 +3,25 @@
   <head>
     <meta charset="utf-8" />
     <title>HTML Academy: Седона</title>
+    <link rel="stylesheet" href="styles/styles.css" />
   </head>
 
   <body>
     <header class="header">
       <div class="header__wrapper container">
-        <img
-          src="images/logo.svg"
-          width="138"
-          height="64"
-          alt="Логотип сайта Седона"
-        />
+        <a
+          ><img
+            src="images/logo.svg"
+            width="138"
+            height="64"
+            alt="Логотип сайта Седона"
+        /></a>
         <nav class="header__navigation">
           <ul class="header__navigation-list">
             <li class="header__navigation-item">
               <a
                 class="header__navigation-link header__navigation-link-current"
-                href="#"
+                href="index.html"
                 >Главная</a
               >
             </li>
@@ -61,35 +63,28 @@
     <main class="main-inner">
       <h1 class="visually-hidden">Седона - городок для отдыха</h1>
       <section class="intro intro-background-image">
-        <style>
-          .intro-background-image {
-            background-image: url(images/welcome/background-banner.jpg);
-            background-repeat: no-repeat;
-            width: 1200;
-            height: 485;
-          }
-        </style>
         <div class="into-wrapper container">
-          <!-- <img
+          <!-- Горы это - фоновое изображение! -->
+          <img
             class="intro__banner"
             src="images/welcome/background-banner.jpg"
             width="1200"
             height="485"
             alt="Главный баннер Седона"
-          /> -->
+          />
           <img
             class="intro__welcome"
             src="images/welcome/welcome.svg"
             width="458"
             height="352"
-            alt="Главный баннер Седона"
+            alt="Welcome to the gorgeous Sedona, because the Grand Canyon sucks!"
           />
           <img
             class="intro__wframe"
             src="images/welcome/vector-for-banner.svg"
             width="1200"
             height="57"
-            alt="Главный баннер Седона"
+            alt="Фрейм лесенка"
           />
         </div>
       </section>
