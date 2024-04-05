@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 - Студент: [Анастасия Пиунова](https://up.htmlacademy.ru/htmlcss-individual/1/user/2396943).
-- Наставник: [Максим Миронов](https://htmlacademy.ru/profile/id1336881).
+- Наставник: [Александр Зиновьев](https://htmlacademy.ru/profile/id198751).
 
 ---
 
