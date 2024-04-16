@@ -10,17 +10,17 @@
 <body>
   <div class="container">
     <header class="header">
-      <a><img src="images/logo.svg" width="138" height="64" alt="Логотип сайта Седона" /></a>
+      <a class="header-logo" href="index.html"><img class="logo-display" src="images/logo.svg" width="140" height="70"  alt="Логотип сайта Седона"></a>
       <nav class="header__navigation">
         <ul class="header__navigation-list">
           <li class="header__navigation-item">
-            <a class="header__navigation-link header__navigation-link-current" href="index.html">Главная</a>
+            <a class="header__navigation-link header__navigation-link-current"  href="index.html">Главная</a>
           </li>
           <li class="header__navigation-item">
-            <a class="header__navigation-link" href="#about">О Cедоне</a>
+            <a class="header__navigation-link" href="#">О Cедоне</a>
           </li>
           <li class="header__navigation-item">
-            <a class="header__navigation-link" href="catalog.html">Гостиницы</a>
+            <a class="header__navigation-link" aria-current="page" href="catalog.html">Гостиницы</a>
           </li>
         </ul>
       </nav>
@@ -49,7 +49,7 @@
                 </a>
               </li>
               <li class="breadcrumbs-item is-disabled">
-                <a class="breadcrumbs-link" href="#">Гостиницы</a>
+                <a class="breadcrumbs-link" aria-current="page" href="catalog.html">Гостиницы</a>
               </li>
             </ol>
             <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="post">
@@ -241,7 +241,7 @@
           <div class="pagination__wrapper">
             <ol class="pagination">
               <li class="pagination-item">
-                <a class="pagination-link pagination-current" title="Вы на первой странице">1</a>
+                <a class="pagination-link pagination-current" aria-current="page" href="catalog.html" title="Вы на первой странице">1</a>
               </li>
               <li class="pagination-item">
                 <a class="pagination-link" href="#">2</a>
