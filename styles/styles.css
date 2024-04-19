@@ -114,7 +114,7 @@ body {
   text-decoration-line: underline;
 }
 
-.intro-background-image {
+.intro {
   background-image: url(../images/welcome/background-banner.jpg);
   background-color: #618fb7;
   color: #000000;
@@ -398,6 +398,10 @@ color: #000000;
 
 .catalog-hotels__list {
   list-style-type: none;
+}
+
+.catalog-hotels__link{
+  text-decoration: none;
 }
 
 .catalog-hotels__tittle {
