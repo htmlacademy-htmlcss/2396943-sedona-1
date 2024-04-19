@@ -237,6 +237,10 @@ color: #000000;
   line-height: 21px;
 }
 
+.hotel-search{
+  text-align: center;
+}
+
 .hotel-search__title {
   font-weight: 700;
   font-size: 30px;
@@ -359,7 +363,7 @@ color: #000000;
   background-color: transparent;
 }
 
-.catalog-hotels__tittle {
+.sorting__tittle {
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
@@ -416,8 +420,30 @@ color: #000000;
   background-color: #82b3d3;
 }
 
-.hotel-stars {
-  list-style-type: none;
+.star {
+  height: 17px;
+  width: 105px;
+}
+
+.star::before {
+  content: '';
+  display: block;
+  height: 17px;
+  background-image: url(../images/catalog/star.svg);
+  background-repeat: space no-repeat;
+  background-size: contain;
+}
+
+.star-4::before {
+  width: 85px;
+}
+
+.star-3::before {
+  width: 65px;
+}
+
+.star-2::before{
+  width: 45px;
 }
 
 .hotels-rating {
