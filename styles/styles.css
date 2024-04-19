@@ -14,12 +14,473 @@
   font-display: swap;
 }
 
-.container {
-  margin: 0 auto;
-}
 
 body {
-  font-family: "PT Sans", Arial, sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 22px;
   line-height: 26px;
+  color: #333333;
+  background-color: #f2f2f2;
+  margin: 0;
+}
+
+.container{
+  width: 1200px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  box-shadow: 0 0 20px rgba(0,0,0, 0.2);
+}
+
+.button {
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #ffffff;
+  background-color: #756157;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.header {
+  color: #000000;
+}
+
+.header-logo{
+  display: inline-block;
+}
+
+.logo-display{
+  display: block;
+}
+
+.header__navigation-list {
+  list-style-type: none;
+}
+
+
+.header__navigation-btn {
+  list-style-type: none;
+}
+
+/* Лупа и сердечко */
+.icon{
+  text-decoration: none;
+}
+
+.icon-search{
+  background-image: url(../images/icons/search.svg);
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.icon-favorites{
+  background-image: url(../images/icons/favorites.svg);
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/* Избранное - 12 */
+.header__navigation-favorites {
+  font-size: 10px;
+  line-height: 10px;
+  color: #ffffff;
+  background-color: #7db54f;
+}
+
+.header__navigation-link {
+  font-size: 20px;
+  line-height: 24px;
+  color: inherit;
+  text-align: center;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+.header__navigation-link-current {
+  text-decoration-line: underline;
+}
+
+.intro-background-image {
+  background-image: url(../images/welcome/background-banner.jpg);
+  background-color: #618fb7;
+  color: #000000;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  max-height: 485px;
+}
+
+/* Фрейм лесенка */
+/* .intro-background-frame{
+  background-image: url(../images/welcome/vector-for-banner.svg);
+  background-color: #ffffff;
+  color: #000000;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  max-height: 57px;
+} */
+
+.advantages {
+  text-align: center;
+}
+
+.advantages__list {
+  list-style-type: none;
+}
+
+.advantages__item{
+  background-color: #82b3d3;
+  color: #ffffff;
+}
+
+.advantages__item-square,
+.advantages__item-tourist{
+background-color: rgb(131, 179, 211, 0.12);
+color: #000000;
+}
+
+.advantages__item-road{
+  background-color: rgb(131, 179, 211, 0.2);
+  color: #000000;
+}
+
+.advantages__title {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+}
+
+.advantages__subtitle{
+  font-weight: 400;
+  font-size: 22px;
+}
+
+.advantages__heading {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  text-transform: uppercase;
+}
+
+.advantages__text {
+  font-size: 18px;
+  line-height: 21px;
+}
+
+
+.services {
+  text-align: center;
+}
+
+.services__title {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #000000;
+}
+
+.services__list {
+  list-style-type: none;
+}
+
+.services__item-home{
+  background-image: url(../images/icons/icon-home.svg);
+  background-color:  rgb(131, 179, 211, 0.12);
+  color: #000000;
+  background-repeat: no-repeat;
+  max-height: 72px;
+}
+
+.services__item-food{
+  background-image: url(../images/icons/icon-food.svg);
+  background-color: #ffffff;
+  color: #000000;
+  background-repeat: no-repeat;
+  max-height: 72px;
+}
+
+.services__item-souvenir{
+  background-image: url(../images/icons/icon-souvenir.svg);
+  background-color:  rgb(131, 179, 211, 0.12);
+  color: #000000;
+  background-repeat: no-repeat;
+  max-height: 72px;
+}
+
+.services__heading {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  text-transform: uppercase;
+  color: #000000;
+
+}
+
+.services__text {
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.hotel-search{
+  text-align: center;
+}
+
+.hotel-search__title {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.button_big {
+  font-size: 20px;
+  line-height: 36px;
+}
+
+.newsletter {
+  text-align: center;
+}
+
+.newsletter-background-image {
+  background-image: url(../images/subscribe.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-color: #3c5243;
+}
+
+.newsletter__title {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.newsletter__subtitle {
+  color: #ffffff;
+}
+
+.button_submit {
+  background-color: #82b3d3;
+  font-size: 20px;
+  line-height: 36px;
+}
+
+.footer {
+  text-align: center;
+}
+
+.social__list {
+  list-style-type: none;
+}
+
+.footer-telephone__number {
+  text-decoration: none;
+  font-size: 40px;
+  line-height: 40px;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.catalog__bacground-image {
+  background-image: url(../images/catalog/background-catalog.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-color: #3c5243;
+}
+
+.catalog__header {
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 70px;
+  color: #ffffff;
+}
+
+.breadcrumbs {
+  color: #ffffff;
+  list-style-type: none;
+}
+
+.breadcrumbs-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Изображение домика - главной страницы */
+.breadcrumbs-link-home{
+  background-image: url(../images/icons/home.svg);
+  background-repeat: no-repeat;
+  max-height: 12px;
+}
+
+.catalog-filter__title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  text-transform: capitalize;
+  color: #ffffff;
+}
+
+.catalog-filter__list {
+  list-style-type: none;
+}
+
+.catalog-filter__item {
+  font-size: 18px;
+  line-height: 23px;
+  color: #ffffff;
+}
+
+.catalog-filter__price {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  text-transform: capitalize;
+}
+
+.button-white {
+  background-color: #82b3d3;
+}
+
+.button-transparent {
+  background-color: transparent;
+}
+
+.sorting__tittle {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.sorting__image-cards {
+  background-image: url(../images/display-view/view-cards.svg);
+  width: 16px;
+  height: 14px;
+  background-color: #ffffff;
+  background-repeat: no-repeat;
+  /* border: 2px solid #000000 48px 48px; */
+}
+
+.sorting__image-large {
+  background-image: url(../images/display-view/view-large.svg);
+  background-color: #ffffff;
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 14px;
+}
+
+.sorting__image-list {
+  background-image: url(../images/display-view/view-list.svg);
+  background-color: #ffffff;
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 14px;
+}
+
+.catalog-hotels__list {
+  list-style-type: none;
+}
+
+.catalog-hotels__tittle {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  color: #000000;
+}
+
+.catalog-hotels__type {
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.catalog-filter__button {
+  text-decoration: none;
+}
+
+.catalog-filter__favorites {
+  background-color: #82b3d3;
+}
+
+.star {
+  height: 17px;
+  width: 105px;
+}
+
+.star::before {
+  content: '';
+  display: block;
+  height: 17px;
+  background-image: url(../images/catalog/star.svg);
+  background-repeat: space no-repeat;
+  background-size: contain;
+}
+
+.star-4::before {
+  width: 85px;
+}
+
+.star-3::before {
+  width: 65px;
+}
+
+.star-2::before{
+  width: 45px;
+}
+
+.hotels-rating {
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  text-align: center;
+  background-color: #f2f2f2;
+}
+
+.current-favorites {
+  background-color: #7db54f;
+}
+
+.pagination {
+  list-style-type: none;
+}
+
+.pagination-link {
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #82b3d3;
+}
+
+.pagination-current {
+  color: #000000;
+  background-color: #f2f2f2;
+}
+
+.newsletter__title-catalog{
+  color: #000000;
+}
+
+.newsletter__subtitle-catalog{
+  color: #333333;
+}
+
+.newsletter-catalog {
+  background-color: #82b3d3;
 }
