@@ -3,16 +3,17 @@
 
 <head>
   <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HTML Academy: Седона</title>
   <link rel="stylesheet" href="styles/styles.css" />
 </head>
+
 
 <body>
   <div class="container">
     <!-- header -->
     <header class="header">
-      <a class="header-logo" aria-current="page" href="index.html"><img src="images/logo.svg" class="logo-display"
-          width="140" height="70" alt="Логотип сайта Седона" /></a>
+      <a class="header-logo" aria-current="page" href="index.html"><img src="images/logo.svg" class="logo-display" width="140" height="70" alt="Логотип сайта Седона"/></a>
       <nav class="header__navigation">
         <ul class="header__navigation-list">
           <li class="header__navigation-item">
@@ -48,7 +49,7 @@
       <section class="intro">
         <h1 class="visually-hidden">Седона - городок для отдыха</h1>
         <img class="intro__welcome" src="images/welcome/welcome.svg" width="458" height="352"
-          alt="Добро пожаловать в великолепную Седону, потому что Гранд-Каньон — отстой!" />
+          alt="Добро пожаловать в великолепную Седону, потому что Гранд-Каньон — отстой!"/>
       </section>
       <!-- advantages -->
       <section class="advantages">
@@ -58,7 +59,7 @@
           <li class="advantages__item">
             <h3 class="advantages__heading">Настоящий городок</h3>
             <p class="advantages__text">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
-            <img src="images/city.jpg" width="800" height="385" alt="Маленький городок Седона на фоне природы" />
+            <img src="images/city.jpg" width="800" height="385" class="advantages__image" alt="Маленький городок Седона на фоне природы" />
           </li>
           <li class="advantages__item advantages__item-square">
             <h3 class="advantages__heading">Небольшая площадь</h3>
@@ -75,7 +76,7 @@
           <li class="advantages__item">
             <h3 class="advantages__heading">Там есть мост дьявола</h3>
             <p class="advantages__text">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
-            <img src="images/bridge.jpg" width="800" height="385" alt="Мост дьявола" />
+            <img src="images/bridge.jpg" width="800" height="385" class="advantages__image" alt="Мост дьявола из камней в каньоне на фоне гор" />
           </li>
         </ul>
       </section>
@@ -111,7 +112,7 @@
         <h2 class="newsletter__title">Подпишитесь на рассылку</h2>
         <p class="newsletter__subtitle">Только полезная информация и никакого спама, честное бойскаутское!</p>
         <form class="newsletter__form" action="https://echo.htmlacademy.ru/" method="post">
-          <label for="email" class="visually-hidden">Ваш e-mail</label>
+          <label for="email" class="visually-hidden">Введите Вашу электронную почту</label>
           <input type="email" name="newsletter-email" placeholder="Ваш e-mail" id="email" required />
           <button class="button button_submit" type="submit">Подписаться</button>
         </form>
@@ -148,13 +149,13 @@
               <path
                 d="M18.94.36H3.51C1.65.36.33 1.95.33 3.76v10.09c0 1.91 1.32 3.5 3.18 3.5h15.65c1.64 0 3.17-1.59 3.17-3.4V3.76c-.22-1.8-1.53-3.4-3.39-3.4ZM7.99 12.89V4.82l7.34 4.04-7.34 4.03Z"
                 fill="#83B3D3" /></svg>
-            <span class="visually-hidden">Иконка Youtube</span>
+            <span class="visually-hidden">Иконка Ютуб</span>
           </a>
         </li>
       </ul>
       <a class="footer-telephone__number" href="tel:+78128121212" aria-label="Контактный телефон">+7 (812) 812-12-12</a>
-      <a href="https://htmlacademy.ru/">
-        <svg width="115" height="34" viewBox="0 0 115 34" fill="none" xmlns="http://www.w3.org/2000/svg" role="img"
+      <a href="https://htmlacademy.ru/" class="footer__logo">
+        <svg  width="115" height="34" viewBox="0 0 115 34" fill="none" xmlns="http://www.w3.org/2000/svg" role="img"
           aria-label="htmlacademy">
           <g clip-path="url(#a)" fill="#000">
             <path

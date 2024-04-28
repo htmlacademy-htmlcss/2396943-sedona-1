@@ -14,6 +14,9 @@
   font-display: swap;
 }
 
+html{
+  height: 100%;
+}
 
 body {
   font-family: "PT Sans", "Arial", sans-serif;
@@ -22,6 +25,9 @@ body {
   color: #333333;
   background-color: #f2f2f2;
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
 }
 
 .container{
@@ -40,6 +46,10 @@ body {
   text-align: center;
   color: #ffffff;
   background-color: #756157;
+  border: none;
+  display: inline-block;
+  appearance: none;
+  text-decoration: none;
 }
 
 .visually-hidden {
@@ -57,23 +67,38 @@ body {
 
 .header {
   color: #000000;
+  display: flex;
+  width: 1200px;
+  margin: 0 auto;
 }
 
 .header-logo{
   display: inline-block;
+  margin-left: 70px;
+  margin-right: 30px;
 }
 
 .logo-display{
   display: block;
 }
 
+
 .header__navigation-list {
   list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 430px;
+  display: flex;
 }
 
 
 .header__navigation-btn {
   list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 88px;
+  display: flex;
+  margin-left: auto;
 }
 
 /* Лупа и сердечко */
@@ -102,6 +127,7 @@ body {
 }
 
 .header__navigation-link {
+  font-weight: 700;
   font-size: 20px;
   line-height: 24px;
   color: inherit;
@@ -110,51 +136,39 @@ body {
   text-transform: capitalize;
 }
 
-.header__navigation-link-current {
+/* .header__navigation-link-current {
   text-decoration-line: underline;
+} */
+
+.main-inner{
+  flex-grow: 1;
 }
 
 .intro {
   background-image: url(../images/welcome/background-banner.jpg);
   background-color: #618fb7;
-  color: #000000;
-  background-size: 100% auto;
-  background-repeat: no-repeat;
+  color: #ffffff;
+  background-size: cover;
   max-height: 485px;
 }
 
+.intro__welcome{
+  display: block;
+  margin: 0 auto;
+}
+
 /* Фрейм лесенка */
-/* .intro-background-frame{
+.intro-background-frame{
   background-image: url(../images/welcome/vector-for-banner.svg);
   background-color: #ffffff;
   color: #000000;
-  background-size: 100% auto;
-  background-repeat: no-repeat;
-  max-height: 57px;
-} */
+  background-size: cover;
+  height: 57px;
+  display: block;
+}
 
 .advantages {
   text-align: center;
-}
-
-.advantages__list {
-  list-style-type: none;
-}
-
-.advantages__item{
-  background-color: #82b3d3;
-  color: #ffffff;
-}
-
-.advantages__item-square,
-.advantages__item-tourist{
-background-color: rgb(131, 179, 211, 0.12);
-color: #000000;
-}
-
-.advantages__item-road{
-  background-color: rgb(131, 179, 211, 0.2);
-  color: #000000;
 }
 
 .advantages__title {
@@ -162,11 +176,26 @@ color: #000000;
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
+  color: #000000;
 }
 
 .advantages__subtitle{
   font-weight: 400;
   font-size: 22px;
+}
+
+.advantages__list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.advantages__item{
+  background-color: #82b3d3;
+  color: #ffffff;
+  width: 400px;
 }
 
 .advantages__heading {
@@ -179,6 +208,21 @@ color: #000000;
 .advantages__text {
   font-size: 18px;
   line-height: 21px;
+}
+
+.advantages__image{
+  display: block;
+}
+
+.advantages__item-square,
+.advantages__item-tourist{
+background-color: rgb(131, 179, 211, 0.12);
+color: #000000;
+}
+
+.advantages__item-road{
+  background-color: rgb(131, 179, 211, 0.2);
+  color: #000000;
 }
 
 
@@ -197,30 +241,37 @@ color: #000000;
 
 .services__list {
   list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.services__item{
+  width: 400px;
 }
 
 .services__item-home{
-  background-image: url(../images/icons/icon-home.svg);
+  /* background-image: url(../images/icons/icon-home.svg); */
   background-color:  rgb(131, 179, 211, 0.12);
   color: #000000;
-  background-repeat: no-repeat;
-  max-height: 72px;
+  /* background-repeat: no-repeat;
+  max-height: 72px; */
 }
 
 .services__item-food{
-  background-image: url(../images/icons/icon-food.svg);
+  /* background-image: url(../images/icons/icon-food.svg); */
   background-color: #ffffff;
   color: #000000;
-  background-repeat: no-repeat;
-  max-height: 72px;
+  /* background-repeat: no-repeat;
+  max-height: 72px; */
 }
 
 .services__item-souvenir{
-  background-image: url(../images/icons/icon-souvenir.svg);
+  /* background-image: url(../images/icons/icon-souvenir.svg); */
   background-color:  rgb(131, 179, 211, 0.12);
   color: #000000;
-  background-repeat: no-repeat;
-  max-height: 72px;
+  /* background-repeat: no-repeat;
+  max-height: 72px; */
 }
 
 .services__heading {
@@ -285,10 +336,19 @@ color: #000000;
 
 .footer {
   text-align: center;
+  display: flex;
+  width: 1060px;
+  margin: 0 auto;
 }
 
 .social__list {
   list-style-type: none;
+  display: flex;
+  width: 142px;
+}
+
+.social__item{
+  display: flex;
 }
 
 .footer-telephone__number {
@@ -297,13 +357,25 @@ color: #000000;
   line-height: 40px;
   text-transform: uppercase;
   color: #000000;
+  width: 331px;
+  margin-left: 236px;
 }
+
+.footer__logo{
+  margin-left: auto;
+  width: 115px;
+}
+
+.main-catalog{
+  flex-grow: 1;
+}
+
 
 .catalog__bacground-image {
   background-image: url(../images/catalog/background-catalog.jpg);
-  background-repeat: no-repeat;
-  background-size: 100% auto;
+  background-size: cover;
   background-color: #3c5243;
+  color: #ffffff;
 }
 
 .catalog__header {
@@ -311,11 +383,17 @@ color: #000000;
   font-size: 60px;
   line-height: 70px;
   color: #ffffff;
+  margin: 0;
+  padding: 0;
+  margin-left: 70px;
 }
 
 .breadcrumbs {
-  color: #ffffff;
   list-style-type: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  margin-left: 70px;
 }
 
 .breadcrumbs-link {
@@ -327,7 +405,18 @@ color: #000000;
 .breadcrumbs-link-home{
   background-image: url(../images/icons/home.svg);
   background-repeat: no-repeat;
-  max-height: 12px;
+  height: 12px;
+  width: 12px;
+  display: block;
+}
+
+.catalog-filter__wrapper{
+  width: 1060px;
+  margin: 0 70px;
+}
+
+.catalog-filter{
+  display: flex;
 }
 
 .catalog-filter__title {
@@ -335,7 +424,6 @@ color: #000000;
   font-size: 20px;
   line-height: 24px;
   text-transform: capitalize;
-  color: #ffffff;
 }
 
 .catalog-filter__list {
@@ -345,7 +433,6 @@ color: #000000;
 .catalog-filter__item {
   font-size: 18px;
   line-height: 23px;
-  color: #ffffff;
 }
 
 .catalog-filter__price {
