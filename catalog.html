@@ -42,7 +42,7 @@
           </a>
         </li>
       </ul>
-      <button class="button" type="button">Хочу сюда!</button>
+      <button class="button button__header" type="button">Хочу сюда!</button>
     </header>
     <!-- main -->
     <main class="main-catalog">
@@ -125,17 +125,23 @@
             </select>
           </label>
           <!-- sorting-2 -->
-          <div class="sorting__show">
-            <button class="sorting__image-cards">
-              <span class="visually-hidden">Показать в виде карточек</span>
-            </button>
-            <button class="sorting__image-large">
-              <span class="visually-hidden">Показать в расширенном виде</span>
-            </button>
-            <button class="sorting__image-list">
-              <span class="visually-hidden">Показать в виде списка</span>
-            </button>
-          </div>
+          <ul class="sorting__show">
+            <li>
+              <button class="sorting__image-cards">
+                <span class="visually-hidden">Показать в виде карточек</span>
+              </button>
+            </li>
+            <li>
+              <button class="sorting__image-large">
+                <span class="visually-hidden">Показать в расширенном виде</span>
+              </button>
+            </li>
+            <li>
+              <button class="sorting__image-list">
+                <span class="visually-hidden">Показать в виде списка</span>
+              </button>
+            </li>
+          </ul>
         </div>
         <!-- catalog-hotels__list -->
         <ul class="catalog-hotels__list">
@@ -145,7 +151,7 @@
             <img src="images/catalog/hotel-1.jpg" width="300" height="212" alt="Amara Resort & Spa" />
             <h3 class="catalog-hotels__tittle">Amara Resort &amp; Spa</h3>
             </a>
-            <p>
+            <p class="catalog-hotels-wrapper">
               <span class="catalog-hotels__type">Гостиница</span>
               <span class="catalog-filter__price">От 4000 ₽</span>
             </p>
@@ -160,7 +166,7 @@
               <img src="images/catalog/hotel-2.jpg" width="300" height="212" alt="Villas at Poco Diablo" />
               <h3 class="catalog-hotels__tittle">Villas at Poco Diablo</h3>
             </a>
-            <p>
+            <p class="catalog-hotels-wrapper">
               <span class="catalog-hotels__type">Гостиница</span>
               <span class="catalog-filter__price">От 5000 ₽</span>
             </p>
@@ -175,7 +181,7 @@
             <img src="images/catalog/hotel-3.jpg" width="300" height="212" alt="Desert Quail Inn" />
             <h3 class="catalog-hotels__tittle">Desert Quail Inn</h3>
             </a>
-            <p>
+            <p class="catalog-hotels-wrapper">
               <span class="catalog-hotels__type">Гостиница</span>
               <span class="catalog-filter__price">От 2500 ₽</span>
             </p>
@@ -190,7 +196,7 @@
               <img src="images/catalog/hotel-4.jpg" width="300" height="212" alt="GreenTree Inn" />
               <h3 class="catalog-hotels__tittle">GreenTree Inn</h3>
             </a>
-            <p>
+            <p class="catalog-hotels-wrapper">
               <span class="catalog-hotels__type">Гостиница</span>
               <span class="catalog-filter__price">От 1500 ₽</span>
             </p>
@@ -216,7 +222,7 @@
           <li class="pagination-item">
             <a class="pagination-link" href="#">4</a>
           </li>
-          <li><a>...</a></li>
+          <li><a class="pagination-ellipsis">...</a></li>
           <li value="10"><a class="pagination-link" href="#">10</a></li>
         </ol>
 
