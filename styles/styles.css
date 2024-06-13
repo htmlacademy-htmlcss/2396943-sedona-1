@@ -653,22 +653,6 @@ body {
   height: 14px;
 }
 
-/* .catalog-hotels__list {
-  list-style-type: none;
-  display: flex;
-  padding: 0 70px;
-  flex-wrap: wrap;
-  margin: 0;
-  margin-bottom: 80px;
-} */
-
-/* .catalog-hotels__item{
-  padding: 20px;
-} */
-
-/* .catalog-hotels__item:not(:last-child){
-  margin-right: 20px;
-} */
 
 .catalog-hotels__list{
   display: grid;
@@ -703,6 +687,7 @@ body {
   line-height: 28px;
   color: #000000;
   margin: 0;
+  margin-top: 16px;
   padding: 0;
 }
 
