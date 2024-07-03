@@ -165,7 +165,7 @@ body {
 }
 
 .icon-favorites:hover{
-  opacity: 50%;
+  opacity: 0.6;
 }
 
 /* Избранное - 12 */
@@ -198,7 +198,18 @@ body {
   padding: 20px 16px;
   display: block;
   position: relative;
+  transition: 0.3s;
 }
+
+.header__navigation-link:hover{
+  opacity: 0.4;
+}
+
+.header__navigation-link:active{
+  color: #68A2CA;
+}
+
+
 
 .header__navigation-link-current::after{
   content: '';
@@ -217,9 +228,6 @@ body {
   margin-bottom: 14px;
   padding: 8px 34px;
 }
-
-
-
 
 
 .main-inner{
@@ -567,23 +575,21 @@ body {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  fill:#83B3D3;
 }
 
-.social__icon{
-  fill: #83B3D3;
-}
-
-.social__icon:focus{
+.social__link:focus{
   fill: #68A2CA;
 }
 
-.social__icon:hover{
+.social__link:hover{
   fill: #68A2CA;
 }
 
-.social__icon:active{
+.social__link:active{
   fill: rgb(104, 162, 202, 0.3);
 }
+
 
 .telephone__number{
   padding-left: 41px;
@@ -619,7 +625,11 @@ body {
   gap: 8px;
 }
 
+
+
 .footer__logo{
+  margin: 8px 0;
+  display: block;
   fill: #000000;
 }
 
@@ -635,10 +645,6 @@ body {
   fill: rgb(117, 97, 87, 0.3);
 }
 
-.footer__logo-link{
-  margin: 8px 0;
-  display: block;
-}
 
 .main-catalog{
   flex-grow: 1;
