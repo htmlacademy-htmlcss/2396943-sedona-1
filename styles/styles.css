@@ -110,8 +110,13 @@ body {
 }
 
 .header-logo:hover{
+  opacity: 0.3;
+}
+
+.header-logo:active{
   opacity: 0.6;
 }
+
 
 .logo-display{
   display: block;
@@ -155,13 +160,22 @@ body {
 }
 
 .icon-search:hover{
-  opacity: 50%;
+  opacity: 0.3;
 }
+
+.icon-search:active{
+  opacity: 0.6;
+}
+
 
 .icon-favorites{
   background-image: url(../images/icons/favorites.svg);
   background-size: 20px 20px;
   position: relative;
+}
+
+.icon-favorites:hover{
+  opacity: 0.3;
 }
 
 .icon-favorites:hover{
