@@ -800,8 +800,12 @@ body {
   line-height: 23px;
 }
 
+.label-checkbox:not(:disabled):hover .control-mark{
+  opacity: 0.6;
+}
+
 .label-checkbox:not(:disabled):active .control-mark{
-  border: 2px solid #83B3D3;
+  opacity: 0.3;
 }
 
 .label-checkbox:disabled + .control-mark{
@@ -838,9 +842,13 @@ body {
   left: 4px;
 }
 
+.label-radio:not(:disabled):hover .control-dot{
+  opacity: 0.6;
+}
+
 
 .label-radio:not(:disabled):active .control-dot{
-  border: 2px solid #83B3D3;
+  opacity: 0.3;
 }
 
 .label-radio:disabled + .control-dot{
@@ -1033,7 +1041,6 @@ body {
 
 .select-control{
   width: 292px;
-  /* width: 100%; */
   margin: 0;
   font-family: inherit;
   font-size: 18px;
