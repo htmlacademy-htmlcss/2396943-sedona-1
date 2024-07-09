@@ -63,15 +63,12 @@ body {
   transition: background-color 0.3s;
 }
 
-.button:focus{
+
+.button:not(:disabled):hover{
   background-color: #615048;
 }
 
-.button:hover{
-  background-color: #615048;
-}
-
-.button:active{
+.button:not(:disabled):active{
   background-color: #756157;
   color: rgb(255, 255, 255, 0.3);
 }
@@ -80,6 +77,7 @@ body {
   background-color: #E5E5E5;
   color: #ffffff;
 }
+
 
 .visually-hidden {
   position: absolute;
@@ -110,11 +108,11 @@ body {
 }
 
 .header-logo:hover{
-  opacity: 0.3;
+  opacity: 0.6;
 }
 
 .header-logo:active{
-  opacity: 0.6;
+  opacity: 0.3;
 }
 
 
@@ -175,11 +173,11 @@ body {
 }
 
 .icon-favorites:hover{
-  opacity: 0.3;
+  opacity: 0.6;
 }
 
 .icon-favorites:hover{
-  opacity: 0.6;
+  opacity: 0.3;
 }
 
 /* Избранное - 12 */
@@ -216,11 +214,11 @@ body {
 }
 
 .header__navigation-link:hover{
-  opacity: 0.4;
+  color: #756157;
 }
 
 .header__navigation-link:active{
-  color: #68A2CA;
+  color: rgb(117, 97, 87, 0.3);
 }
 
 
@@ -549,17 +547,18 @@ body {
   border-radius: 0 4px 4px 0;
 }
 
-.button_submit:focus{
+.button_submit:not(:disabled):hover{
   background-color: #68A2CA;
 }
 
-.button_submit:hover{
-  background-color: #68A2CA;
-}
-
-.button_submit:active{
+.button_submit:not(:disabled):active{
   background-color: #68A2CA;
   color: rgb(255, 255, 255, 0.3);
+}
+
+.button_submit:disabled{
+  background-color: #E5E5E5;
+  color: #ffffff;
 }
 
 
@@ -592,9 +591,6 @@ body {
   fill:#83B3D3;
 }
 
-.social__link:focus{
-  fill: #68A2CA;
-}
 
 .social__link:hover{
   fill: #68A2CA;
@@ -620,9 +616,6 @@ body {
   transition: 0.3s;
 }
 
-.footer-telephone__number:focus{
-  color: #756157;
-}
 
 .footer-telephone__number:hover{
   color: #756157;
@@ -640,15 +633,10 @@ body {
 }
 
 
-
 .footer__logo{
   margin: 8px 0;
   display: block;
   fill: #000000;
-}
-
-.footer__logo:focus{
-  fill: #756157;
 }
 
 .footer__logo:hover{
@@ -715,13 +703,31 @@ body {
   color: inherit;
 }
 
+.breadcrumbs-link:hover{
+  color: rgb(255, 255, 255, 0.6);
+}
+
+.breadcrumbs-link:active{
+  color: rgb(255, 255, 255, 0.3);
+}
+
 .breadcrumbs-link-home{
   background-image: url(../images//breadcrumbs/home.svg);
   background-repeat: no-repeat;
   background-size: contain;
-  height: 12px;
-  width: 12px;
+  display: block;
+  height: 15px;
+  width: 13px;
 }
+
+/* .breadcrumbs-link-home{
+  mask-image: url(../images/breadcrumbs/home.svg);
+  mask-size: 15px 13px;
+  mask-position: center;
+  mask-repeat: no-repeat;
+  background-color: #ffffff;
+} */
+
 
 .breadcrumbs-link:last-child{
   margin-right: 0;
@@ -732,7 +738,7 @@ body {
 }
 
 .catalog-filter__group{
-  width: 140px;
+  width: 150px;
   margin: 0;
   padding: 0;
   border: none;
@@ -761,6 +767,87 @@ body {
   line-height: 23px;
 }
 
+.label-checkbox{
+  position: relative;
+  display: block;
+  padding-left: 36px;
+}
+
+/* Mark */
+.control-mark{
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 18px;
+  height: 18px;
+  background-color: #ffffff;
+  border: 2px solid #ffffff;
+  border-radius: 4px;
+}
+
+.control-input[type="checkbox"]:checked + .control-mark::before{
+  content: '';
+  display: block;
+  background-image: url(../images/catalog/tick.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 18px;
+}
+
+.control-label{
+  font-family: inherit;
+  font-size: 18px;
+  line-height: 23px;
+}
+
+.label-checkbox:not(:disabled):active .control-mark{
+  border: 2px solid #83B3D3;
+}
+
+.label-checkbox:disabled + .control-mark{
+  border: 2px solid #333333;
+  background-color: #333333;
+}
+
+.label-radio{
+  position: relative;
+  display: block;
+  padding-left: 36px;
+}
+
+/* Mark */
+.control-dot{
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 18px;
+  height: 18px;
+  background-color: #ffffff;
+  border: 2px solid #ffffff;
+  border-radius: 100%;
+}
+
+.control-input[type="radio"]:checked + .control-dot::before{
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  background-color: #3F5E72;
+  top: 4px;
+  left: 4px;
+}
+
+
+.label-radio:not(:disabled):active .control-dot{
+  border: 2px solid #83B3D3;
+}
+
+.label-radio:disabled + .control-dot{
+  border: 2px solid #333333;
+  background-color: #333333;
+}
+
 .catalog-filter__price__wrapper{
   display: flex;
   flex-direction: column;
@@ -775,12 +862,116 @@ body {
   font-size: 20px;
   line-height: 24px;
   text-transform: capitalize;
+  justify-self: end;
+  margin-bottom: 32px;
+}
+
+.field__wrapper{
+  display: flex;
+  gap: 2px;
+  margin-bottom: 36px;
+}
+
+.field{
+  margin: 0;
+  padding: 12px 20px;
+  max-width: 143px;
+  max-height: 48px;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  background-color: #F2F2F2;
+  color: #000000;
+  border-radius: 4px 0 0 4px;
+  border: 2px solid #F2F2F2;
+  box-sizing: border-box;
+}
+
+.field--to{
+  border-radius: 0 4px 4px 0;
+}
+
+.field::-webkit-inner-spin-button,
+.field::-webkit-outer-spin-button{
+  appearance: none;
+  margin: 0;
+}
+
+
+.field:not(:disabled):hover{
+  background-color: #E6E6E6;
+}
+
+.field:not(:disabled):active{
+  border: 2px solid #000000;
+  outline: none;
+}
+
+.field:disabled{
+  background-color: #E5E5E5;
+  color: #ffffff;
+}
+
+.field::placeholder{
+  color: #000000;
+  opacity: 0.3;
+}
+
+.catalog-filter__price {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  text-transform: capitalize;
+  justify-self: end;
+}
+
+.range-scale{
+  position: relative;
+  height: 4px;
+  background-color: #909598;
+}
+
+.range-bar{
+  position: absolute;
+  height: 4px;
+  background-color: #ffffff;
+}
+
+.range-toggle{
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  background-color: #ffffff;
+  border: 2px solid #ffffff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.range-toggle:hover{
+  background-color: #E6E6E6;
+  border: 2px solid #E6E6E6;
+}
+
+.range-toggle:active{
+  border: 2px solid #000000;
+}
+
+.range-toggle-min{
+  top: -8px;
+  left: -10px;
+}
+
+.range-toggle-max{
+  top: -8px;
+  right: -10px;
 }
 
 .catalog-button__wrapper{
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: end;
+  align-items: baseline;
   margin-left: 70px;
   gap: 32px;
 }
@@ -790,15 +981,12 @@ body {
   padding: 8px 50px;
 }
 
-.button-white:focus{
+
+.button-white:not(:disabled):hover{
   background-color: #68A2CA;
 }
 
-.button-white:hover{
-  background-color: #68A2CA;
-}
-
-.button-white:active{
+.button-white:not(:disabled):active{
   background-color: #68A2CA;
   color: rgb(255, 255, 255, 0.3)
 }
@@ -809,19 +997,13 @@ body {
   padding: 8px 50px;
 }
 
-.button-transparent:focus{
-  border: 3px solid #83B3D3;
-  border-radius: 4px;
-  background-color: rgba(0, 0, 0, 0.0);
 
-}
-
-.button-transparent:hover{
+.button-transparent:not(:disabled):hover{
   opacity: 0.6;
   background-color: rgba(0, 0, 0, 0.0);
 }
 
-.button-transparent:active{
+.button-transparent:not(:disabled):active{
   opacity: 0.3;
   background-color: rgba(0, 0, 0, 0.0);
 }
@@ -864,12 +1046,8 @@ body {
   background-image: url(../images/catalog/sorting-arrow.svg);
   background-repeat: no-repeat;
   background-position: right 20px center;
+  background-color: #ffffff;
   padding-right: 40px;
-}
-
-.select-control:focus{
-  border-color: #3F5E72;
-  outline: none;
 }
 
 .select-control:hover{
@@ -907,9 +1085,6 @@ body {
   padding: 14px 12px;
 }
 
-.sorting__image:focus{
-  border: 2px solid #68A2CA;
-}
 
 .sorting__image:hover{
   border: 2px solid #000000;
@@ -973,9 +1148,7 @@ body {
   padding: 0;
 }
 
-.catalog-filter__price{
-  justify-self: end;
-}
+
 
 /* Кнопка ПОДРОБНЕЕ */
 .catalog-filter__button{
@@ -988,10 +1161,6 @@ body {
   /* padding: 8px 20px; */
 }
 
-
-.catalog-filter__favorites:focus{
-  background-color: #68A2CA;
-}
 
 .catalog-filter__favorites:hover{
   background-color: #68A2CA;
@@ -1008,9 +1177,6 @@ body {
   background-color: #7db54f;
 }
 
-.current-favorites:focus{
-  background-color: #6C9E42;
-}
 
 .current-favorites:hover{
   background-color: #6C9E42;
@@ -1060,6 +1226,7 @@ body {
   text-transform: uppercase;
   text-align: center;
   background-color: #f2f2f2;
+  border-radius: 4px;
   padding: 8px 22px;
 }
 
@@ -1088,10 +1255,6 @@ body {
   font-weight: 700;
 }
 
-
-.pagination-link:focus{
-  background-color: #68A2CA;
-}
 
 .pagination-link:hover{
   background-color: #68A2CA;

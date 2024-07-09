@@ -67,16 +67,25 @@
               <legend class="catalog-filter__title">Инфраструктура:</legend>
               <ul class="catalog-filter__list">
                 <li class="catalog-filter__item">
-                  <input class="control-input" type="checkbox" name="pool" id="pool" checked />
-                  <label class="label-checkbox" for="pool">Бассейн</label>
+                  <label class="label-checkbox">
+                  <input class="control-input visually-hidden" type="checkbox" name="pool" checked />
+                  <span class="control-mark"></span>
+                  <span class="control-label">Бассейн</span>
+                </label>
                 </li>
                 <li class="catalog-filter__item">
-                  <input class="control-input" type="checkbox" name="parcking" id="parcking" checked />
-                  <label class="label-checkbox" for="parcking">Парковка</label>
+                  <label class="label-checkbox">
+                  <input class="control-input visually-hidden" type="checkbox" name="parcking" checked />
+                  <span class="control-mark"></span>
+                  <span class="control-label">Парковка</span>
+                </label>
                 </li>
                 <li class="catalog-filter__item">
-                  <input class="control-input" type="checkbox" name="WiFi" id="wifi" />
-                  <label class="label-checkbox" for="wifi">Wi-Fi</label>
+                  <label class="label-checkbox">
+                  <input class="control-input visually-hidden" type="checkbox" name="WiFi"  />
+                  <span class="control-mark"></span>
+                  <span class="control-label">Wi-Fi</span>
+                  </label>
                 </li>
               </ul>
             </fieldset>
@@ -85,28 +94,41 @@
               <legend class="catalog-filter__title">Тип жилья:</legend>
               <ul class="catalog-filter__list">
                 <li class="catalog-filter__item">
-                  <input class="control-input" type="radio" name="type-of-housing" value="hotel" id="hotel" checked />
-                  <label class="label-radio" for="hotel">Гостиница</label>
+                  <label class="label-radio">
+                  <input class="control-input visually-hidden" type="radio" name="type-of-housing" value="hotel" checked />
+                  <span class="control-dot"></span>
+                  <span class="control-label">Гостиница</span>
+                  </label>
                 </li>
                 <li class="catalog-filter__item">
-                  <input class="control-input" type="radio" name="type-of-housing" value="motel" id="motel" />
-                  <label class="label-radio" for="motel">Мотель</label>
+                  <label class="label-radio">
+                  <input class="control-input visually-hidden" type="radio" name="type-of-housing" value="motel"/>
+                  <span class="control-dot"></span>
+                  <span class="control-label">Мотель</span>
+                  </label>
                 </li>
                 <li class="catalog-filter__item">
-                  <input class="control-input" type="radio" name="type-of-housing" value="apartments" id="apartments" />
-                  <label class="label-radio" for="apartments">Апартаменты</label>
+                  <label class="label-radio">
+                  <input class="control-input visually-hidden" type="radio" name="type-of-housing" value="apartments"/>
+                  <span class="control-dot"></span>
+                  <span class="control-label">Апартаменты</span>
+                  </label>
                 </li>
               </ul>
             </fieldset>
             <!-- Стоимость -->
             <fieldset class="catalog-filter__price__wrapper">
               <legend class="catalog-filter__price">Стоимость, ₽:</legend>
-              <label>
-                <input type="number" placeholder="от" value="0" />
-                <input type="number" placeholder="до" value="9000" />
+              <label class="field__wrapper">
+                <input class="field" type="number" placeholder="от" value="0"/>
+                <input class="field field--to" type="number" placeholder="до" value="9000"/>
               </label>
-              <button type="button"></button>
-              <button type="button"></button>
+                <div class="range-scale">
+                  <div class="range-bar" style="left: 0; width: 226px;">
+                    <button type="button" class="range-toggle range-toggle-min"></button>
+                    <button type="button" class="range-toggle range-toggle-max"></button>
+                  </div>
+                </div>
             </fieldset>
             <div class="catalog-button__wrapper">
               <button class="button button-white" type="submit">Применить</button>
