@@ -194,6 +194,52 @@
       </section>
     </footer>
   </div>
+
+<div class="modal-container modal-container-close">
+  <div class="modal modal-search">
+    <button class="modal-close-button">
+      <span class="visually-hidden">Закрыть</span>
+    </button>
+    <section class="modal-content">
+      <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+      <form class="search-form" action="https://echo.htmlacademy.ru/" method="get">
+        <label class="search-label" for="arrival-date">Дата заезда:</label>
+          <input class="field field-search" type="text" name="arrival-date" placeholder="Укажите дату" id="arrival-date"/>
+          <p class="search-text past">Мы не можем отправить вас в прошлое.</p>
+      </form>
+      <form class="search-form" action="https://echo.htmlacademy.ru/" method="get">
+        <label class="search-label" for="departure-date">Дата выезда:</label>
+          <input class="field field-search" type="text" name="departure-date" placeholder="Укажите дату" id="departure-date"/>
+          <p class="search-text">На эти даты есть свободные номера. Пока есть.</p>
+      </form>
+      <div class="search-flex-container">
+        <form class="search-form" action="https://echo.htmlacademy.ru/" method="get">
+          <label class="search-label search-label-short" for="adults">Взрослые:</label>
+            <input class="field field-search-short" type="number" name="adults" id="adults" value="2"/>
+        </form>
+        <form class="search-form" action="https://echo.htmlacademy.ru/" method="get">
+          <span class="search-label form-label-icon">
+            <label class="search-label search-label-short" for="kids">Дети:</label>
+            <span class="tooltip">
+              <button class="tooltip-toggle" type="button" id="tooltip-label-kids">
+                <svg class="tooltip-icon" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="13" cy="13" r="13"/>
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M12 7H14V9H12V7ZM14 19H12V10H14V19Z" fill="white"/>
+                  </svg>
+              </button>
+              <span class="tooltip-text" role="tooltip" aria-labelledby="tooltip-label-kids">Укажите количество детей,<span class="break"></span> которые будут с вами, возраст которых от 6 до 18 лет.Дети<span class="break"></span> до 6 лет размещаются<span class="break"></span> бесплатно.</span>
+            </span>
+          </span>
+            <input class="field field-search-short" type="number" name="kids" id="kids" value="2"/>
+        </form>
+      </div>
+      <button class="button button-white button-white-search" type="submit">Найти</button>
+    </section>
+  </div>
+
+</div>
+
+
 </body>
 
 </html>
