@@ -1327,9 +1327,9 @@ body {
   background-color: rgb(242, 242, 242, 0.8);
 }
 
-.modal-container-close {
+/* .modal-container-close {
   display: none;
-}
+} */
 
 .modal{
   position: relative;
@@ -1401,7 +1401,6 @@ body {
 }
 
 .search-label-short{
-  position: relative;
   margin-right: 46px;
 }
 
@@ -1413,6 +1412,8 @@ body {
   background-position: right 20px center;
   background-color: #F2F2F2;
   padding-right: 40px;
+  padding: 14px 10px;
+
 }
 
 .field-search:hover{
@@ -1427,9 +1428,12 @@ body {
 
 
 .field-search-short{
-  width: 110px;
-  border-radius: 4px;
   text-align: center;
+  width: 31px;
+  height: 48px;
+  padding: 14px 10px;
+  border: 0;
+  box-sizing: border-box;
 }
 
 
@@ -1533,32 +1537,21 @@ body {
   position: relative;
 }
 
-.button-minus{
-  position: absolute;
+.button-amount{
   padding: 14px 10px;
-  top: 10px;
-  left: 56px;
-  width: 20px;
-  height: 20px;
-  border: none;
-  background-color: transparent;
-  background-image: url(../images/icons/button-minus.svg);
-  background-repeat: no-repeat;
-  background-position: center;
+  width: 40px;
+  height: 48px;
+  border: 0;
+  background-color: #f2f2f2;
+  color: rgba(117, 97, 87, 0.03);
   cursor: pointer;
 }
 
+
+.button-minus{
+  border-radius: 4px 0 0 4px;
+}
+
 .button-plus{
-  position: absolute;
-  padding: 14px 10px;
-  top: 12px;
-  left: 117px;
-  width: 20px;
-  height: 20px;
-  border: none;
-  background-color: transparent;
-  background-image: url(../images/icons/button-plus.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  cursor: pointer;
+  border-radius: 4px 0 0 4px;
 }

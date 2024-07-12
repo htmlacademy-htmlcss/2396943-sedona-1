@@ -206,8 +206,7 @@
 
         <p class="search-wrapper">
           <label class="search-label" for="arrival-date">Дата заезда:</label>
-          <input class="field field-search" type="text" name="arrival-date" placeholder="Укажите дату" value="27 апреля 2020"
-            id="arrival-date" />
+          <input class="field field-search" type="text" name="arrival-date" placeholder="Укажите дату" value="27 апреля 2020" id="arrival-date" />
         </p>
         <p class="search-text past">Мы не можем отправить вас в прошлое.</p>
 
@@ -221,9 +220,13 @@
         <div class="search-flex-container">
           <p class="search-wrapper search-wrapper--short">
           <label class="search-label search-label-short" for="adults">Взрослые:</label>
-          <button class="button-minus" type="button"></button>
+          <button class="button-amount button-minus" type="button">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 9v2h14V9H3Z" fill="#756157" fill-opacity=".3"/></svg>
+          </button>
           <input class="field field-search-short" type="number" name="adults" id="adults" value="2" />
-          <button class="button-plus" type="button"></button>
+          <button class="button-amount button-plus" type="button">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17 9h-6V3H9v6H3v2h6v6h2v-6h6V9Z" fill="#756157" fill-opacity=".3"/></svg>
+          </button>
           </p>
           <p class="search-wrapper">
             <span class="search-label form-label-icon">
@@ -241,9 +244,13 @@
                     class="break"></span> до 6 лет размещаются<span class="break"></span> бесплатно.</span>
               </span>
             </span>
-            <button class="button-minus" type="button"></button>
+            <button class="button-amount button-minus" type="button">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 9v2h14V9H3Z" fill="#756157" fill-opacity=".3"/></svg>
+            </button>
             <input class="field field-search-short" type="number" name="kids" id="kids" value="2" />
-            <button class="button-plus" type="button"></button>
+            <button class="button-amount button-plus" type="button">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17 9h-6V3H9v6H3v2h6v6h2v-6h6V9Z" fill="#756157" fill-opacity=".3"/></svg>
+            </button>
           </p>
         </div>
         <button class="button button-white button-white-search" type="submit">Найти</button>
