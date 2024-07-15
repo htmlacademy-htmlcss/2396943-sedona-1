@@ -76,6 +76,7 @@ body {
 .button:disabled{
   background-color: #E5E5E5;
   color: #ffffff;
+  cursor: not-allowed;
 }
 
 
@@ -532,10 +533,26 @@ body {
   font-size: 18px;
   font-family: inherit;
   box-sizing: border-box;
-  border: none;
   background-color: #f2f2f2;
   color: #000000;
+  border: 2px solid #f2f2f2;
   border-radius: 4px 0 0 4px;
+}
+
+.newsletter__form-input:not(:disabled):hover{
+  background-color: #E6E6E6;
+}
+
+.newsletter__form-input:not(:disabled):active{
+  background-color: #F2F2F2;
+  border: 2px solid #000000;
+  border-radius: 4px 0 0 4px;
+  outline: none;
+}
+
+.newsletter__form-input:disabled{
+  background-color: #E5E5E5;
+  color: #ffffff;
 }
 
 
@@ -794,6 +811,24 @@ body {
   width: 20px;
 }
 
+.control-input:focus-visible{
+  outline: 0;
+}
+
+.control-input:focus-visible + .control-mark{
+  outline: auto;
+}
+
+.control-input:focus-visible{
+  outline: 0;
+}
+
+.control-input:focus-visible + .control-dot{
+  outline: auto;
+}
+
+
+
 .control-label{
   font-family: inherit;
   font-size: 18px;
@@ -922,6 +957,10 @@ body {
 .field::-webkit-outer-spin-button{
   appearance: none;
   margin: 0;
+}
+
+.field{
+  -moz-appearance: textfield;
 }
 
 
@@ -1163,6 +1202,16 @@ body {
   display: block;
 }
 
+.catalog-hotels__link:hover{
+  opacity: 0.6;
+}
+
+.catalog-hotels__link:active{
+  opacity: 0.3;
+}
+
+
+
 .catalog-hotels__tittle {
   font-weight: 700;
   font-size: 24px;
@@ -1347,19 +1396,28 @@ body {
 
 .modal-close-button{
   position: absolute;
-  padding: 0;
+  padding: 17px 16px;
   top: 64px;
   right: 52px;
   width: 52px;
   height: 52px;
   border: none;
   border-radius: 100%;
-  background-color: #ffffff;
-  background-image: url(../images/icons/modal-close.svg);
-  background-repeat: no-repeat;
-  background-position: center;
+  background-color: #f2f2f2;
+  color: #000000;
   cursor: pointer;
 }
+
+.modal-close-button:hover {
+  background-color: #E6E6E6;
+}
+
+
+.modal-close-button:active{
+  background-color: #E6E6E6;
+  color:rgb(0, 0, 0, 0.3)
+}
+
 
 .modal-title{
   margin: 0;
@@ -1416,14 +1474,19 @@ body {
 
 }
 
-.field-search:hover{
+.field-search:not(:disabled):hover{
   background-color: #E6E6E6;
 }
 
-.field-search:active{
+.field-search:not(:disabled):active{
   background-color: #F2F2F2;
   border: 2px solid #000000;
   border-radius: 4px;
+}
+
+.field:disabled{
+  background-color: #E5E5E5;
+  color: #ffffff;
 }
 
 
@@ -1434,6 +1497,7 @@ body {
   padding: 14px 10px;
   border: 0;
   box-sizing: border-box;
+  border-radius: 0;
 }
 
 
@@ -1451,6 +1515,7 @@ body {
 .button-white-search{
   width: 577px;
   height: 60px;
+  border-radius: 10px;
 }
 
 .search-text{
@@ -1459,6 +1524,7 @@ body {
   padding: 0 20px;
   margin-left: 137px;
   margin-bottom: 23px;
+  margin-top: 0;
 }
 
 .past{
@@ -1541,17 +1607,24 @@ body {
   padding: 14px 10px;
   width: 40px;
   height: 48px;
-  border: 0;
   background-color: #f2f2f2;
-  color: rgba(117, 97, 87, 0.03);
+  color: rgba(117, 97, 87, 0.3);
+  border: 0;
   cursor: pointer;
 }
-
 
 .button-minus{
   border-radius: 4px 0 0 4px;
 }
 
 .button-plus{
-  border-radius: 4px 0 0 4px;
+  border-radius: 0 4px 4px 0;
+}
+
+.button-amount:hover {
+  color: #000000;
+}
+
+.button-amount:active {
+  color: rgba(0,0,0, 0.3);
 }
