@@ -67,22 +67,22 @@
               <legend class="catalog-filter__title">Инфраструктура:</legend>
               <ul class="catalog-filter__list">
                 <li class="catalog-filter__item">
-                  <label class="label-checkbox">
-                    <input class="control-input visually-hidden" type="checkbox" name="pool" checked />
+                  <label class="label-checkbox" for="pool">
+                    <input class="control-input visually-hidden" type="checkbox" name="pool" id="pool" checked />
                     <span class="control-mark"></span>
                     <span class="control-label">Бассейн</span>
                   </label>
                 </li>
                 <li class="catalog-filter__item">
-                  <label class="label-checkbox">
-                    <input class="control-input visually-hidden" type="checkbox" name="parcking" checked />
+                  <label class="label-checkbox" for="parcking">
+                    <input class="control-input visually-hidden" type="checkbox" name="parcking" id="parcking" checked />
                     <span class="control-mark"></span>
                     <span class="control-label">Парковка</span>
                   </label>
                 </li>
                 <li class="catalog-filter__item">
-                  <label class="label-checkbox">
-                    <input class="control-input visually-hidden" type="checkbox" name="WiFi" />
+                  <label class="label-checkbox" for="WiFi">
+                    <input class="control-input visually-hidden" type="checkbox" name="WiFi" id="WiFi" />
                     <span class="control-mark"></span>
                     <span class="control-label">Wi-Fi</span>
                   </label>
@@ -94,24 +94,23 @@
               <legend class="catalog-filter__title">Тип жилья:</legend>
               <ul class="catalog-filter__list">
                 <li class="catalog-filter__item">
-                  <label class="label-radio">
-                    <input class="control-input visually-hidden" type="radio" name="type-of-housing" value="hotel"
-                      checked />
+                  <label class="label-radio" for="hotel">
+                    <input class="control-input visually-hidden" type="radio" name="type-of-housing" value="hotel" id="hotel" checked />
                     <span class="control-dot"></span>
                     <span class="control-label">Гостиница</span>
                   </label>
                 </li>
                 <li class="catalog-filter__item">
-                  <label class="label-radio">
-                    <input class="control-input visually-hidden" type="radio" name="type-of-housing" value="motel" />
+                  <label class="label-radio" for="motel">
+                    <input class="control-input visually-hidden" type="radio" name="type-of-housing" value="motel" id="motel"/>
                     <span class="control-dot"></span>
                     <span class="control-label">Мотель</span>
                   </label>
                 </li>
                 <li class="catalog-filter__item">
-                  <label class="label-radio">
+                  <label class="label-radio" for="apartments">
                     <input class="control-input visually-hidden" type="radio" name="type-of-housing"
-                      value="apartments" />
+                      value="apartments" id="apartments"/>
                     <span class="control-dot"></span>
                     <span class="control-label">Апартаменты</span>
                   </label>
@@ -120,21 +119,23 @@
             </fieldset>
             <!-- Стоимость -->
             <fieldset class="catalog-filter__price__wrapper">
-              <legend class="catalog-filter__price">Стоимость, ₽:</legend>
+              <legend class="catalog-filter__price-header">Стоимость, ₽:</legend>
               <div class="catalog-field-wrapper">
-                <label class="field__wrapper">
-                  <input class="field" type="number" value="0" min="0" max="9000" />
+                <label class="field__wrapper" for="min_price">
+                  <span class="visually-hidden">минимальная стоимость</span>
                   <span class="filed-placeholder">от</span>
+                  <input class="field" type="number" value="0" id="min_price" min="0" max="9000" />
                 </label>
-                <label class="field__wrapper">
-                  <input class="field field--to" type="number" value="9000" min="0" max="9000" />
+                <label class="field__wrapper" for="max_price">
+                  <span class="visually-hidden">максимальная стоимость</span>
                   <span class="filed-placeholder">до</span>
+                  <input class="field field--to" type="number" value="9000" id="max_price" min="0" max="9000" />
                 </label>
               </div>
               <div class="range-scale">
                 <div class="range-bar" style="left: 0; width: 226px;">
-                  <button type="button" class="range-toggle range-toggle-min"></button>
-                  <button type="button" class="range-toggle range-toggle-max"></button>
+                  <button class="range-toggle range-toggle-min" type="button"></button>
+                  <button class="range-toggle range-toggle-max" type="button"></button>
                 </div>
               </div>
             </fieldset>
@@ -234,23 +235,23 @@
         </ul>
 
         <!-- pagination -->
-        <ol class="pagination">
-          <li class="pagination-item">
-            <a class="pagination-link pagination-current" aria-current="page" href="catalog.html"
-              title="Вы на первой странице">1</a>
-          </li>
-          <li class="pagination-item">
-            <a class="pagination-link" href="#">2</a>
-          </li>
-          <li class="pagination-item">
-            <a class="pagination-link" href="#">3</a>
-          </li>
-          <li class="pagination-item">
-            <a class="pagination-link" href="#">4</a>
-          </li>
-          <li><a class="pagination-ellipsis">...</a></li>
-          <li value="10"><a class="pagination-link" href="#">10</a></li>
-        </ol>
+          <ol class="pagination">
+            <li>
+              <a class="pagination-link pagination-current" aria-current="page" href="catalog.html"
+                title="Вы на первой странице">1</a>
+            </li>
+            <li>
+              <a class="pagination-link" href="#">2</a>
+            </li>
+            <li>
+              <a class="pagination-link" href="#">3</a>
+            </li>
+            <li>
+              <a class="pagination-link" href="#">4</a>
+            </li>
+            <li><a class="pagination-ellipsis">...</a></li>
+            <li value="10"><a class="pagination-link" href="#">10</a></li>
+          </ol>
 
       </section>
       <!-- newsletter -->
