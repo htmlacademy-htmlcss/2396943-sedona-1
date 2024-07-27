@@ -145,7 +145,6 @@ img {
   margin-right: 25px;
 }
 
-/* Лупа и сердечко */
 .icon{
   text-decoration: none;
   display: block;
@@ -416,7 +415,7 @@ img {
   box-sizing: border-box;
   background-color:  rgb(131, 179, 211, 0.12);
   color: #000000;
-  min-width: 385px;
+  min-height: 385px;
 }
 
 .services__item--light {
@@ -670,7 +669,7 @@ img {
   flex-grow: 1;
 }
 
-.catalog__bacground-image {
+.catalog__background-image {
   background-image: url(../images/catalog/background-catalog.jpg);
   background-size: cover;
   background-position: center;
@@ -791,13 +790,12 @@ img {
   line-height: 23px;
 }
 
-.label-checkbox {
+.label-control {
   position: relative;
   display: block;
   padding-left: 36px;
 }
 
-/* Mark */
 .control-mark {
   position: absolute;
   top: 2px;
@@ -818,48 +816,42 @@ img {
   width: 20px;
 }
 
-.control-input:focus-visible {
-  outline: 0;
-}
-
-.control-input:focus-visible + .control-mark {
-  outline: auto;
-}
-
-.control-input:focus-visible {
-  outline: 0;
-}
-
-.control-input:focus-visible + .control-dot {
-  outline: auto;
-}
-
 .control-label {
   font-family: inherit;
   font-size: 18px;
   line-height: 23px;
 }
 
-.label-checkbox:not(:disabled):hover {
+.label-control:not(:has(.control-input:disabled)):hover {
   opacity: 0.6;
 }
 
-.label-checkbox:not(:disabled):active {
+.label-control:not(:has(.control-input:disabled)):active {
   opacity: 0.3;
 }
 
-.label-checkbox:disabled {
-  border: 2px solid #333333;
-  background-color: #333333;
+.control-input:focus-visible + .control-mark {
+  outline: auto;
 }
 
-.label-radio {
-  position: relative;
-  display: block;
-  padding-left: 36px;
+.control-input:disabled + .control-mark {
+  background-color: #A9A9A9;
+  border-color: #A9A9A9;
 }
 
-/* Mark */
+.control-input:disabled + .control-label {
+  color: #A9A9A9;
+}
+
+.control-input:focus-visible + .control-dot {
+  outline: auto;
+}
+
+.control-input:disabled + .control-dot {
+  background-color: #A9A9A9;
+  border-color: #A9A9A9;
+}
+
 .control-dot {
   position: absolute;
   top: 2px;
@@ -879,19 +871,6 @@ img {
   background-color: #3F5E72;
   top: 5px;
   left: 5px;
-}
-
-.label-radio:not(:disabled):hover {
-  opacity: 0.6;
-}
-
-.label-radio:not(:disabled):active {
-  opacity: 0.3;
-}
-
-.label-radio:disabled {
-  border: 2px solid #333333;
-  background-color: #333333;
 }
 
 .catalog-filter__price__wrapper {
