@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HTML Academy: Гостиницы Седоны</title>
   <link rel="stylesheet" href="styles/styles.css" />
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
 </head>
 
 <body>
@@ -46,10 +48,10 @@
     </header>
     <!-- main -->
     <main class="main-catalog">
-      <!-- catalog -->
+
       <section class="catalog ">
         <!-- breadcrumbs -->
-        <div class="catalog__bacground-image">
+        <div class="catalog__background-image">
           <h1 class="catalog__header">Гостиницы Седоны</h1>
           <ol class="breadcrumbs">
             <li class="breadcrumbs-item">
@@ -61,27 +63,27 @@
               <a class="breadcrumbs-link" aria-current="page" href="catalog.html">Гостиницы</a>
             </li>
           </ol>
+
           <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="post">
-            <!-- checkbox -->
             <fieldset class="catalog-filter__group">
               <legend class="catalog-filter__title">Инфраструктура:</legend>
               <ul class="catalog-filter__list">
                 <li class="catalog-filter__item">
-                  <label class="label-checkbox" for="pool">
+                  <label class="label-control" for="pool">
                     <input class="control-input visually-hidden" type="checkbox" name="pool" id="pool" checked />
                     <span class="control-mark"></span>
                     <span class="control-label">Бассейн</span>
                   </label>
                 </li>
                 <li class="catalog-filter__item">
-                  <label class="label-checkbox" for="parcking">
-                    <input class="control-input visually-hidden" type="checkbox" name="parcking" id="parcking" checked />
+                  <label class="label-control" for="parking">
+                    <input class="control-input visually-hidden" type="checkbox" name="parking" id="parking" checked />
                     <span class="control-mark"></span>
                     <span class="control-label">Парковка</span>
                   </label>
                 </li>
                 <li class="catalog-filter__item">
-                  <label class="label-checkbox" for="WiFi">
+                  <label class="label-control" for="WiFi">
                     <input class="control-input visually-hidden" type="checkbox" name="WiFi" id="WiFi" />
                     <span class="control-mark"></span>
                     <span class="control-label">Wi-Fi</span>
@@ -89,26 +91,26 @@
                 </li>
               </ul>
             </fieldset>
-            <!-- radio -->
+
             <fieldset class="catalog-filter__group">
               <legend class="catalog-filter__title">Тип жилья:</legend>
               <ul class="catalog-filter__list">
                 <li class="catalog-filter__item">
-                  <label class="label-radio" for="hotel">
+                  <label class="label-control" for="hotel">
                     <input class="control-input visually-hidden" type="radio" name="type-of-housing" value="hotel" id="hotel" checked />
                     <span class="control-dot"></span>
                     <span class="control-label">Гостиница</span>
                   </label>
                 </li>
                 <li class="catalog-filter__item">
-                  <label class="label-radio" for="motel">
+                  <label class="label-control" for="motel">
                     <input class="control-input visually-hidden" type="radio" name="type-of-housing" value="motel" id="motel"/>
                     <span class="control-dot"></span>
                     <span class="control-label">Мотель</span>
                   </label>
                 </li>
                 <li class="catalog-filter__item">
-                  <label class="label-radio" for="apartments">
+                  <label class="label-control" for="apartments">
                     <input class="control-input visually-hidden" type="radio" name="type-of-housing"
                       value="apartments" id="apartments"/>
                     <span class="control-dot"></span>
@@ -117,7 +119,7 @@
                 </li>
               </ul>
             </fieldset>
-            <!-- Стоимость -->
+
             <fieldset class="catalog-filter__price__wrapper">
               <legend class="catalog-filter__price-header">Стоимость, ₽:</legend>
               <div class="catalog-field-wrapper">
@@ -145,8 +147,8 @@
             </div>
           </form>
         </div>
+
         <div class="sorting__wrapper">
-          <!-- sorting-1 -->
           <h2 class="sorting__tittle">Найдено гостиниц: 38</h2>
           <label class="sorting__category">
             <select class="select-control" aria-label="Сортировка">
@@ -155,7 +157,7 @@
               <option value="expensive">Сначала дорогое</option>
             </select>
           </label>
-          <!-- sorting-2 -->
+
           <ul class="sorting__show">
             <li>
               <a class="sorting__image sorting__image-cards" href="#">
@@ -176,7 +178,7 @@
         </div>
         <!-- catalog-hotels__list -->
         <ul class="catalog-hotels__list">
-          <!-- hotel-1 -->
+
           <li class="catalog-hotels__item">
             <a class="catalog-hotels__link" href="#">
               <img class="catalog-hotels__image" src="images/catalog/hotel-1.jpg" width="300" height="212"
@@ -190,7 +192,7 @@
             <div class="star star-4" role="img" aria-label="4 звезды"></div>
             <span class="hotels-rating">Рейтинг: 8,5</span>
           </li>
-          <!-- hotel-2 -->
+
           <li class="catalog-hotels__item">
             <a class="catalog-hotels__link" href="#">
               <img class="catalog-hotels__image" src="images/catalog/hotel-2.jpg" width="300" height="212"
@@ -204,7 +206,7 @@
             <div class="star star-4" role="img" aria-label="4 звезды"></div>
             <span class="hotels-rating">Рейтинг: 9,2</span>
           </li>
-          <!-- hotel-3 -->
+
           <li class="catalog-hotels__item">
             <a class="catalog-hotels__link" href="#">
               <img class="catalog-hotels__image" src="images/catalog/hotel-3.jpg" width="300" height="212"
@@ -218,7 +220,7 @@
             <div class="star star-3" role="img" aria-label="3 звезды"></div>
             <span class="hotels-rating">Рейтинг: 6,9</span>
           </li>
-          <!-- hotel-4 -->
+
           <li class="catalog-hotels__item">
             <a class="catalog-hotels__link" href="#">
               <img class="catalog-hotels__image" src="images/catalog/hotel-4.jpg" width="300" height="212"
@@ -270,7 +272,7 @@
     </main>
     <!-- footer -->
     <footer class="footer">
-      <!-- Социальные сети -->
+
       <section class="social">
         <h2 class="visually-hidden">Социальные сети</h2>
         <ul class="social__list">
@@ -306,12 +308,12 @@
           </li>
         </ul>
       </section>
-      <!-- Телефон -->
+
       <section class="telephone__number">
         <h2 class="visually-hidden">Контактный телефон</h2>
         <a class="footer-telephone__number" href="tel:+78128121212">+7 (812) 812-12-12</a>
       </section>
-      <!-- Партнеры -->
+
       <section class="partners">
         <h2 class="visually-hidden">Партнеры</h2>
         <a class="footer__logo" href="https://htmlacademy.ru/">
